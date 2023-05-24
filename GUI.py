@@ -1,5 +1,7 @@
 import tkinter as tk
-
+from tkinter import filedialog, Text
+import os
+root = tk.Tk()
 def show_output():
     number = int(number_input.get())
 
@@ -7,7 +9,7 @@ def show_output():
     for i in range(1, 13):
         output += str(number) + ' x ' + str(i)
         output += ' = ' + str(number * i) + '\n'
-
+    output_label.configure(text=output)
 window = tk.Tk()
 window.title('JustPython')
 window.minsize(width=400, height=400)
